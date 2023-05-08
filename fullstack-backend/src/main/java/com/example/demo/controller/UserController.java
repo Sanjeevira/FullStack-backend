@@ -43,5 +43,10 @@ public class UserController {
 		return gbi;
 		
 	}
+	@DeleteMapping("deleteprofile/{id}")
+	public void deleteProfile(@PathVariable("id") int id)
+	{
+		userSer.deleteProfile(id);
+	}
 
 }

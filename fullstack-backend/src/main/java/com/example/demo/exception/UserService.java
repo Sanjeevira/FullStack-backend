@@ -52,5 +52,8 @@ public class UserService {
 		return gbi;
 		
 	}
+	public void deleteProfile(int i) {
+		userRep.deleteById(i);
+	}
 
 }
