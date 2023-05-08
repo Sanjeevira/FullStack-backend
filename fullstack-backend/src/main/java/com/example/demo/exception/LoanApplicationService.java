@@ -17,5 +17,9 @@ public class LoanApplicationService {
 		List<LoanApplicationModel> l=laRep.findAll();
 		return l;
 	}
+	public LoanApplicationModel saveUser(LoanApplicationModel u) {
+		// TODO Auto-generated method stub
+		return laRep.save(u);
+	}
 
 }

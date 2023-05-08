@@ -16,11 +16,18 @@ import com.example.demo.exception.LoanApplicationService;
 public class LoanApplicationController {
 	@Autowired
 	LoanApplicationService laSer;
+	@PostMapping("/loan")
+
+	public LoanApplicationModel addDetails(@RequestBody LoanApplicationModel u)
+	{
+		return laSer.saveUser(u);
+	}
 	@GetMapping(value="/getAllLoans")
 	public List<LoanApplicationModel> get()
 	{
 		List<LoanApplicationModel> l=laSer.get();
 		return l;
 	}
+	
 
 }
